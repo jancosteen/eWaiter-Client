@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
+  { path: 'restaurant', loadChildren: () => import('./restaurant/restaurant.module').then(m => m.RestaurantModule)}, //check file path
   { path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 

@@ -6,7 +6,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
-import {MatMenuModule} from '@angular/material/menu';;
+import {MatMenuModule} from '@angular/material/menu';
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {MatMenuModule} from '@angular/material/menu';;
     MatButtonModule,
     MatIconModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import {MatMenuModule} from '@angular/material/menu';;
     MatButtonModule,
     MatIconModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule
   ]
 })
 export class MaterialModule { }
