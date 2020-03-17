@@ -1102,7 +1102,8 @@ body {
     background: rgba(0, 0, 0, 0.1); }
 
 .mat-table {
-  background: white; }
+  background: white;
+  font-family: Roboto; }
 
 .mat-table thead, .mat-table tbody, .mat-table tfoot,
 mat-header-row, mat-row, mat-footer-row,
