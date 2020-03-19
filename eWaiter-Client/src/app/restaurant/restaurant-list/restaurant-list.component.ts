@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Restaurant } from '_interface/restaurant.model';
 import { RepositoryService } from 'src/app/shared/repository.service';
+import { MatSortModule, MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-restaurant-list',
@@ -21,10 +22,20 @@ export class RestaurantListComponent implements OnInit {
 
   public restaurantDataSource = new MatTableDataSource<Restaurant>();
 
+  @ViewChild(MatSort) sort: MatSort;
+
   constructor(private repoService: RepositoryService) { }
 
   ngOnInit() {
     this.getAllRestaurants();
+  }
+
+  ngAfterViewInit(): void {
+    this.restaurantDataSource.sort = this.sort;
+  }
+
+  public doFilter = (value: string) => {
+    this.restaurantDataSource.filter = value.trim().toLocaleLowerCase();
   }
 
   public getAllRestaurants = () => {

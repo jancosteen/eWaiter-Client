@@ -4,6 +4,8 @@ import { RestaurantListComponent } from './restaurant-list/restaurant-list.compo
 import { RestaurantRoutingModule } from './restaurant-routing/restaurant-routing.module';
 	
 import { MaterialModule } from './../material/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 
 
@@ -12,7 +14,8 @@ import { MaterialModule } from './../material/material.module';
   imports: [
     CommonModule,
     RestaurantRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ]
 })
 export class RestaurantModule { }
