@@ -1,10 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { Restaurant } from '_interface/restaurant.model';
+import { Restaurant } from 'src/app/_interface/restaurant.model';
 import { RepositoryService } from 'src/app/shared/repository.service';
 import { MatSortModule, MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { ErrorHandlerService } from 'src/app/shared/error-handler.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-restaurant-list',
@@ -27,7 +28,7 @@ export class RestaurantListComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private repoService: RepositoryService, private errorService:ErrorHandlerService) { }
+  constructor(private repoService: RepositoryService, private errorService:ErrorHandlerService, private router: Router) { }
 
   ngOnInit() {
     this.getAllRestaurants();
@@ -52,8 +53,9 @@ export class RestaurantListComponent implements OnInit {
       })
   }
 
-  public redirectToDetails = (id: number) => {
-
+  public redirectToDetails = (id: string) => {
+    let url: string =`/restaurant/details/${id}`;
+    this.router.navigate([url]);
   }
 
   public redirectToUpdate = (id: number) => {

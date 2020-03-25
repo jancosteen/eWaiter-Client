@@ -15,6 +15,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 @NgModule({
@@ -34,7 +37,10 @@ import { MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatPaginatorModule,
     MatProgressBarModule,
     MatCheckboxModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatCardModule,
+    MatSelectModule,
+    MatExpansionModule 
   ],
   imports: [
     CommonModule,
@@ -52,7 +58,10 @@ import { MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatPaginatorModule,
     MatProgressBarModule,
     MatCheckboxModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatCardModule,
+    MatSelectModule,
+    MatExpansionModule 
   ]
 })
 export class MaterialModule { }

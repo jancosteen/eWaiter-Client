@@ -1,1 +1,2 @@
-<p>restaurant-details works!</p>
+<app-restaurant-data [restaurant]='restaurant' (selectEmitt)='showDetails = $event'></app-restaurant-data>
+<app-food-type-data *ngIf='showDetails'></app-food-type-data>
