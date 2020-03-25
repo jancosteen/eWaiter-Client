@@ -5,12 +5,13 @@ import { RestaurantRoutingModule } from './restaurant-routing/restaurant-routing
 	
 import { MaterialModule } from './../material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { RestaurantDetailsComponent } from './restaurant-details/restaurant-details.component';
 
 
 
 
 @NgModule({
-  declarations: [RestaurantListComponent],
+  declarations: [RestaurantListComponent, RestaurantDetailsComponent],
   imports: [
     CommonModule,
     RestaurantRoutingModule,
