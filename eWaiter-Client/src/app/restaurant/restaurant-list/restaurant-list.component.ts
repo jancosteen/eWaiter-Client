@@ -3,6 +3,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Restaurant } from '_interface/restaurant.model';
 import { RepositoryService } from 'src/app/shared/repository.service';
 import { MatSortModule, MatSort } from '@angular/material/sort';
+import { MatPaginator } from '@angular/material/paginator';
+import { ErrorHandlerService } from 'src/app/shared/error-handler.service';
 
 @Component({
   selector: 'app-restaurant-list',
@@ -23,8 +25,9 @@ export class RestaurantListComponent implements OnInit {
   public restaurantDataSource = new MatTableDataSource<Restaurant>();
 
   @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private repoService: RepositoryService) { }
+  constructor(private repoService: RepositoryService, private errorService:ErrorHandlerService) { }
 
   ngOnInit() {
     this.getAllRestaurants();
@@ -32,6 +35,7 @@ export class RestaurantListComponent implements OnInit {
 
   ngAfterViewInit(): void {
     this.restaurantDataSource.sort = this.sort;
+    this.restaurantDataSource.paginator = this.paginator;
   }
 
   public doFilter = (value: string) => {
@@ -42,6 +46,9 @@ export class RestaurantListComponent implements OnInit {
     this.repoService.getRestaurants('api/restaurant')
       .subscribe(res => {
         this.restaurantDataSource.data = res as Restaurant[];
+      },
+      (error) => {
+        this.errorService.handleError(error);
       })
   }
 
