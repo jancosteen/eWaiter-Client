@@ -12,11 +12,15 @@ import { ErrorDialogComponent } from './dialogs/error-dialog/error-dialog.compon
   imports: [
     CommonModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    SuccessDialogComponent,
+    ErrorDialogComponent
   ],
   exports: [
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    SuccessDialogComponent,
+    ErrorDialogComponent
   ]
 })
 export class SharedModule { }
