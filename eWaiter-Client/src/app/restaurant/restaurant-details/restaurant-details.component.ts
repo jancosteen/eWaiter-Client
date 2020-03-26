@@ -3,6 +3,7 @@ import { Restaurant } from 'src/app/_interface/restaurant.model';
 import { RepositoryService } from 'src/app/shared/repository.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ErrorHandlerService } from 'src/app/shared/error-handler.service';
+import { FoodType } from 'src/app/_interface/foodType.model';
 
 @Component({
   selector: 'app-restaurant-details',
@@ -27,6 +28,7 @@ export class RestaurantDetailsComponent implements OnInit {
     this.repository.getRestaurants(apiUrl)
       .subscribe(res => {
         this.restaurant = res as Restaurant;
+         
       },
       (error) => {
         this.errorHandler.handleError(error);
