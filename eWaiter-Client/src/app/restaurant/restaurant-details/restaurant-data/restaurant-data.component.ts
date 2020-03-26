@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Restaurant } from 'src/app/_interface/restaurant.model';
+import { Restaurant } from 'src/app/_interface/Restaurant/restaurant.model';
 
 @Component({
   selector: 'app-restaurant-data',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Restaurant } from 'src/app/_interface/restaurant.model';
+import { Restaurant } from 'src/app/_interface/Restaurant/restaurant.model';
 import { RepositoryService } from 'src/app/shared/repository.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ErrorHandlerService } from 'src/app/shared/error-handler.service';

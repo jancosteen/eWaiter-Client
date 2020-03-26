@@ -11,17 +11,20 @@ import { AdvertisementDataComponent } from './restaurant-details/advertisement-d
 import { FoodTypeDataComponent } from './restaurant-details/food-type-data/food-type-data.component';
 import { RetaurantImgDataComponent } from './restaurant-details/retaurant-img-data/retaurant-img-data.component';
 import { RestaurantTypeDataComponent } from './restaurant-details/restaurant-type-data/restaurant-type-data.component';
+import { RestaurantCreateComponent } from './restaurant-create/restaurant-create.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
 
 @NgModule({
-  declarations: [RestaurantListComponent, RestaurantDetailsComponent, RestaurantDataComponent, AdvertisementDataComponent, FoodTypeDataComponent, RetaurantImgDataComponent, RestaurantTypeDataComponent],
+  declarations: [RestaurantListComponent, RestaurantDetailsComponent, RestaurantDataComponent, AdvertisementDataComponent, FoodTypeDataComponent, RetaurantImgDataComponent, RestaurantTypeDataComponent, RestaurantCreateComponent],
   imports: [
     CommonModule,
     RestaurantRoutingModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ReactiveFormsModule
   ]
 })
 export class RestaurantModule { }

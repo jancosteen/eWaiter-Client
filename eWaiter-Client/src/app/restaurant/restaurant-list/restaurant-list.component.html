@@ -1,8 +1,11 @@
-<div fxLayout fxLayoutAlign="center center">
-    <mat-form-field fxFlex="40%">
+<div fxLayout fxLayout.lt-md="column wrap" fxLayoutAlign="center center" fxLayoutGap.gt-sm="250px" fxLayoutGap.lt.md="20px" >    
+    <mat-form-field>
       <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
     </mat-form-field>
-  </div>
+    <div>
+        <a [routerLink]="['/restaurant/create']" mat-button color="primary">Create Restaurant</a>
+    </div>
+</div>
 
 <div class="example-container mat-elevation-z8">
     <mat-paginator [pageSize] ="2" [pageSizeOptions]="[2, 4, 6, 10, 20]"></mat-paginator>

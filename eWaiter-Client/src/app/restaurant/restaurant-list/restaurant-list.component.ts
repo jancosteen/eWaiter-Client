@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { Restaurant } from 'src/app/_interface/restaurant.model';
+import { Restaurant } from 'src/app/_interface/Restaurant/restaurant.model';
 import { RepositoryService } from 'src/app/shared/repository.service';
 import { MatSortModule, MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
