@@ -27,8 +27,7 @@ export class RestaurantDetailsComponent implements OnInit {
 
     this.repository.getRestaurants(apiUrl)
       .subscribe(res => {
-        this.restaurant = res as Restaurant;
-         
+        this.restaurant = res as Restaurant;         
       },
       (error) => {
         this.errorHandler.handleError(error);
